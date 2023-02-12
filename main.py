@@ -28,6 +28,9 @@ for file_name in os.listdir(folder_path):
 				geom_text = geom_text.strip()
 				geoms.append(geom_text)
 				data = data[offset:]
-		print(f'{file_name}:{"+".join(geoms)}')
+		if geoms:
+			print(f'{file_name}:{"+".join(geoms)}')
+		else:
+			print(f"No meshes found in {file_name}")
 print("Done!")
 os.system("pause")
